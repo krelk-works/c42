@@ -1,21 +1,19 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/07 20:22:16 by lcraciun          #+#    #+#             */
+/*   Updated: 2024/06/08 17:11:19 by lcraciun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	/*int	pos;
-
-	pos = 0;
-	while (pos < argc)
-	{
-		ft_putchar(argv[pos]);
-		pos++;
-	}*/
-
-	//printf("%d", argc);
-	//printf("%s", argv[1]);
-	
 	int	pos_param;
 
 	pos_param = 1;
@@ -23,16 +21,14 @@ void	main(int argc, char *argv[])
 	{
 		while (argc > pos_param)
 		{
-			char	*current_param;
-
-			current_param = argv[pos_param];
-			while (*current_param != '\0')
+			while (*argv[pos_param] != '\0')
 			{
-				ft_putchar(*current_param);
-				current_param++;
+				ft_putchar(*argv[pos_param]);
+				argv[pos_param]++;
 			}
 			ft_putchar('\n');
 			pos_param++;
 		}
 	}
+	return (0);
 }
