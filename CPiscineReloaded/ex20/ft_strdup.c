@@ -6,29 +6,12 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 19:38:35 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/08 20:00:03 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/11 19:57:40 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	char	actual_char;
-
-	while (*str != '\0')
-	{
-		actual_char = *str;
-		ft_putchar((actual_char));
-		str++;
-	}
-}
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -46,25 +29,28 @@ int	ft_strlen(char *str)
 char	*ft_strdup(char *src)
 {
 	char	*new_str;
+	char	*begin;
 
-	new_str = malloc(ft_strlen(src) * sizeof(char));
+	new_str = malloc((ft_strlen(src) + 1) * sizeof(char));
+	begin = new_str;
 	while (*src != '\0')
 	{
 		*new_str = *src;
 		src++;
 		new_str++;
 	}
-	new_str++;
 	*new_str = '\0';
-	return (new_str);
+	return (begin);
 }
-
+/*
 int	main(void)
 {
 	char	*temp;
 	char	*dup;
 
-	temp = "Una frase";
+	temp = "jlhaa;ga;kijg;IRGJIRILWrgWGRLWrig;LIWRG;LWNrg?";
 	dup = ft_strdup(temp);
-	ft_putstr(dup);
+	//ft_putstr(dup);
+	printf("%s", dup);
 }
+*/
