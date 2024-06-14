@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 19:09:31 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/11 19:15:25 by lcraciun         ###   ########.fr       */
+/*   Created: 2024/06/13 19:47:22 by lcraciun          #+#    #+#             */
+/*   Updated: 2024/06/13 19:57:14 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef FT_POINT_H
 
-#include <stdio.h>
+# define FT_POINT_H
 
-#define ABS(x) (((x) + ((x) >> (sizeof(x) * 8 - 1))) \
-		^ ((x) >> (sizeof(x) * 8 - 1)))
-/*
-int	main(void)
+typedef struct s_point
 {
-	int	a;
-	int	b;
-	int	c;
-
-	a = -5;
-	b = 7;
-	c = 0;
-	printf("ABS(%d) = %d\n", a, ABS(a));
-	printf("ABS(%d) = %d\n", b, ABS(b));
-	printf("ABS(%d) = %d\n", c, ABS(c));
-	return (0);
-}
-*/
+	int	x;
+	int	y;
+}	t_point;
+#endif

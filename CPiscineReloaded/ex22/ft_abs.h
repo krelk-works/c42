@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 14:49:07 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/12 19:55:00 by lcraciun         ###   ########.fr       */
+/*   Created: 2024/06/11 19:09:31 by lcraciun          #+#    #+#             */
+/*   Updated: 2024/06/12 19:31:51 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_iterative_factorial(int nb)
-{
-	int	factorial;
-	int	current_position;
-
-	factorial = 1;
-	current_position = 1;
-	while (current_position <= nb)
-	{
-		factorial = current_position * factorial;
-		current_position++;
-	}
-	if (nb < 0)
-		return (0);
-	else if (nb > 0 && nb < 2)
-		return (1);
-	else
-		return (factorial);
-}
+#define ABS(x) (((x) + ((x) >> (sizeof(x) * 8 - 1))) \
+		^ ((x) >> (sizeof(x) * 8 - 1)))
 /*
 int	main(void)
 {
-	int	fact;
+	int	a;
+	int	b;
+	int	c;
 
-	fact = 0;
-	fact = ft_iterative_factorial(19);
-	printf("%d", fact);
+	a = -5;
+	b = 7;
+	c = 0;
+	printf("ABS(%d) = %d\n", a, ABS(a));
+	printf("ABS(%d) = %d\n", b, ABS(b));
+	printf("ABS(%d) = %d\n", c, ABS(c));
 	return (0);
 }
 */

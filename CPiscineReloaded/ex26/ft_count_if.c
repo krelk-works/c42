@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 14:49:07 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/12 19:55:00 by lcraciun         ###   ########.fr       */
+/*   Created: 2024/06/14 18:28:08 by lcraciun          #+#    #+#             */
+/*   Updated: 2024/06/14 21:16:46 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-int	ft_iterative_factorial(int nb)
+#include <unistd.h>
+/*
+int	ft_test_if(char	*c)
 {
-	int	factorial;
-	int	current_position;
-
-	factorial = 1;
-	current_position = 1;
-	while (current_position <= nb)
-	{
-		factorial = current_position * factorial;
-		current_position++;
-	}
-	if (nb < 0)
-		return (0);
-	else if (nb > 0 && nb < 2)
+	if (c)
 		return (1);
-	else
-		return (factorial);
+}
+*/
+int	ft_count_if(char **tab, int (*f)(char *))
+{
+	int	count;
+	int	i;
+
+	count = 0;
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		if ((*f)(tab[i]) == 1)
+			count++;
+		i++;
+	}
+	return (count);
 }
 /*
 int	main(void)
 {
-	int	fact;
+	char	*text;
+	int		resp;
 
-	fact = 0;
-	fact = ft_iterative_factorial(19);
-	printf("%d", fact);
-	return (0);
+	text = "khhglkhalkghglkahgluahguhs sg sh gh hg";
+	resp = ft_count_if(&text, ft_test_if);
+	printf("%d", resp);
 }
 */

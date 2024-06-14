@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 14:49:07 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/12 19:55:00 by lcraciun         ###   ########.fr       */
+/*   Created: 2024/06/14 17:50:50 by lcraciun          #+#    #+#             */
+/*   Updated: 2024/06/14 18:07:10 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+#include <unistd.h>
+#include <stdio.h>
 
-//#include <stdio.h>
-int	ft_iterative_factorial(int nb)
+void	ft_putnbr(int nb) {
+	printf("%d", nb);
+}
+*/
+void	ft_foreach(int *tab, int lenght, void (*f)(int))
 {
-	int	factorial;
-	int	current_position;
+	int	i;
 
-	factorial = 1;
-	current_position = 1;
-	while (current_position <= nb)
+	i = 0;
+	while (i < lenght)
 	{
-		factorial = current_position * factorial;
-		current_position++;
+		(*f)(tab[i]);
+		i++;
 	}
-	if (nb < 0)
-		return (0);
-	else if (nb > 0 && nb < 2)
-		return (1);
-	else
-		return (factorial);
 }
 /*
 int	main(void)
 {
-	int	fact;
+	int	*arr;
 
-	fact = 0;
-	fact = ft_iterative_factorial(19);
-	printf("%d", fact);
-	return (0);
+	arr[0] = 1;
+	arr[1] = 2;
+	arr[2] = 3;
+	arr[3] = 4;
+	ft_foreach(arr, 4, &ft_putnbr);
 }
 */
