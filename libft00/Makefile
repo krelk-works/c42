@@ -1,0 +1,36 @@
+# Nombre del programa
+NAME = libft.a
+
+# Archivos fuente
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
+
+# Archivos objeto
+OBJS = $(SRCS:.c=.o)
+
+# Flags de compilación
+CFLAGS = -Wall -Werror -Wextra
+
+# Comando de compilación
+CC = gcc
+
+# Regla por defecto
+all: $(NAME)
+
+# Regla para crear la librería estática
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+# Regla para compilar archivos .c en .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Limpiar archivos objeto
+clean:
+	rm -f $(OBJS)
+
+# Limpiar todo
+fclean: clean
+	rm -f $(NAME)
+
+# Reconstruir todo
+re: fclean all
