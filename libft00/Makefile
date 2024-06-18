@@ -2,7 +2,7 @@
 NAME = libft.a
 
 # Archivos fuente
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c
 
 # Archivos objeto
 OBJS = $(SRCS:.c=.o)
@@ -19,6 +19,7 @@ all: $(NAME)
 # Regla para crear la librería estática
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	gcc -o test_program main.c -L. -lft
 
 # Regla para compilar archivos .c en .o
 %.o: %.c
