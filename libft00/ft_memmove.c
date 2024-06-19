@@ -6,13 +6,13 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:55:15 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/18 19:00:45 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/19 15:50:09 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy_forward(void *dest, const void *src, size_t n)
+static void	*ft_memcpy_forward(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
@@ -29,7 +29,7 @@ void	*ft_memcpy_forward(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-void	*ft_memcpy_backward(void *dest, const void *src, size_t n)
+static void	*ft_memcpy_backward(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
