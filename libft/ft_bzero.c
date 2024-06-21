@@ -6,13 +6,13 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:50:19 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/18 17:53:23 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/21 19:39:51 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
 
@@ -23,5 +23,4 @@ void	*ft_bzero(void *s, size_t n)
 		p++;
 		n--;
 	}
-	return (s);
 }

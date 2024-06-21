@@ -11,7 +11,7 @@ OBJS = $(SRCS:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 
 # Comando de compilación
-CC = gcc
+CC = cc
 
 # Regla por defecto
 all: $(NAME)
