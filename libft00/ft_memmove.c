@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 18:55:15 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/19 15:50:09 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/21 14:38:02 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ static void	*ft_memcpy_backward(void *dest, const void *src, size_t n)
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	if (!dest && !src)
+		return (0);
 	if (dest < src)
 	{
 		return (ft_memcpy_forward(dest, src, n));

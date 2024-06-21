@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 16:32:55 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/18 17:43:45 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/21 14:24:25 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,15 @@ int	main(void)
 	}
     	printf("\n");
 	//Fin test MEMSET
+
+	// Test MEMMOVE
+	char str[19] = "123456789012345678";
+
+	// Copiamos el contenido superpuesto en la misma cadena
+	ft_memmove(str + 5, str, 10);
+
+	// Imprimimos el contenido de la cadena
+	printf("Contenido de str: %s\n", str);
+
+	// Fin test MEMMOVE
 }
