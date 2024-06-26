@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 18:54:20 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/26 20:58:51 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/26 21:17:27 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ int	main(void)
 	char	*text;
 
 	text = "************Testeo**********";
-	ft_strtrim(text, "*");
-	printf("%s", text);
+	printf("%s", ft_strtrim(text, "*"));
 	return (0);
 }
 */
