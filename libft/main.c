@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 16:32:55 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/24 19:59:28 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/26 21:11:11 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,4 +96,12 @@ int	main(void)
 	printf(CYAN "Resultado: %s\n" RESET, ft_strjoin(txt001, txt002));
 
 	// FIN TEST ft_strjoin
+	
+	
+	printf(GREEN "===== == TEST ft_strtrim == =====\n" RESET);
+	char    *ft_strtrim_text;
+        ft_strtrim_text = "***************Testeo*************";
+	printf("ft_strtrim_text = **********Testeo**********\n");
+        ft_strtrim(ft_strtrim_text, "*");
+	printf("Resultado -> " GREEN "%s\n" RESET, ft_strtrim(ft_strtrim_text, "*"));
 }
