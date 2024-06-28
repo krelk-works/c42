@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 16:32:55 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/26 21:11:11 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/28 20:06:19 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int	main(void)
 	printf("%s\n", txt002);
 	printf(CYAN "Resultado: %s\n" RESET, ft_strjoin(txt001, txt002));
 
-	// FIN TEST ft_strjoin
+	// FIN TEST ft_strtrim
 	
 	
 	printf(GREEN "===== == TEST ft_strtrim == =====\n" RESET);
@@ -104,4 +104,13 @@ int	main(void)
 	printf("ft_strtrim_text = **********Testeo**********\n");
         ft_strtrim(ft_strtrim_text, "*");
 	printf("Resultado -> " GREEN "%s\n" RESET, ft_strtrim(ft_strtrim_text, "*"));
+
+
+	// TEST - ft_split
+	char    **arraydechars;
+        char    *textocondelimitador;
+
+        textocondelimitador = "adios,bienvenido,casa,arbol,terraza,abrigo,";
+        arraydechars = ft_split(textocondelimitador, ',');
+	// FIN TEST ft_split
 }
