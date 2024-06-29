@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 16:32:55 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/28 20:06:19 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/29 18:39:21 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ int	main(void)
 	char	*text;
 
 	text = "Hola mundo!";
-	printf("Inserta una letra :");
-	scanf("%c", &c);
+	//printf("Inserta una letra :");
+	//scanf("%c", &c);
+	c = 'A';
 	printf(GREEN "===== == TEST ft_isalpha == =====\n" RESET);
 	if (ft_isalpha(c))
 		printf(GREEN "Es una letra del alfabeto\n" RESET);
@@ -107,10 +108,18 @@ int	main(void)
 
 
 	// TEST - ft_split
+	printf(GREEN "===== == TEST ft_split == =====\n" RESET);
 	char    **arraydechars;
         char    *textocondelimitador;
+	int	csplit;
 
-        textocondelimitador = "adios,bienvenido,casa,arbol,terraza,abrigo,";
+	csplit = 0;
+        textocondelimitador = "hola,,2";
         arraydechars = ft_split(textocondelimitador, ',');
+	while (arraydechars[csplit])
+	{
+		printf("[] %s \n", arraydechars[csplit]);
+		csplit++;
+	}
 	// FIN TEST ft_split
 }

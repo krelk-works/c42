@@ -6,20 +6,20 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 20:17:27 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/08 17:09:10 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/06/29 18:51:55 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-/*
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-*/
+
 void	ft_putstr(char *str)
 {
 	char	actual_char;
@@ -31,7 +31,7 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
-/*
+
 int	main(void)
 {
 	char*	frase;
@@ -40,4 +40,4 @@ int	main(void)
 	ft_putstr(frase);
 	return (0);
 }
-*/
+

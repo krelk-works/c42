@@ -35,3 +35,6 @@ fclean: clean
 
 # Reconstruir todo
 re: fclean all
+
+test: re
+	./test_program
