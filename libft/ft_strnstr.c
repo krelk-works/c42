@@ -6,51 +6,24 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:43:37 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/21 18:10:10 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/07/12 20:32:40 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_matchstring(char *big, char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*tbig;
-	char	*tlittle;
+	size_t	i;
 
-	tbig = (char *)big;
-	tlittle = (char *)little;
-	while (len > 0 && *tbig != '\0' && *tlittle != '\0')
+	if (*needle == 0)
+		return ((char *)haystack);
+	i = ft_strlen(needle);
+	while (*haystack && i <= len--)
 	{
-		if (*tbig == *tlittle)
-			len--;
-		tbig++;
-		tlittle++;
-	}
-	if (len == 0)
-		return (1);
-	else
-		return (0);
-}
-
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	const char	*tbig;
-	const char	*tlittle;
-
-	tbig = (const char *)big;
-	tlittle = (const char *)little;
-	if (!little)
-		return ((char *)tbig);
-	while (*tbig != '\0')
-	{
-		if (*tbig == *tlittle)
-		{
-			if (ft_matchstring((char *)tbig, (char *)tlittle, len))
-			{
-				return ((char *)tbig);
-			}
-		}
-		tbig++;
+		if (!(ft_strncmp((char *)haystack, (char *)needle, i)))
+			return ((char *)haystack);
+		haystack++;
 	}
 	return (NULL);
 }

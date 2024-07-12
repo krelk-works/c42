@@ -6,7 +6,7 @@
 /*   By: lcraciun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 16:32:55 by lcraciun          #+#    #+#             */
-/*   Updated: 2024/06/29 18:39:21 by lcraciun         ###   ########.fr       */
+/*   Updated: 2024/07/09 19:42:46 by lcraciun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int	main(void)
 	int	csplit;
 
 	csplit = 0;
-        textocondelimitador = "hola,,2";
+        textocondelimitador = "hola,adios,tierra,mar,y,aire";
         arraydechars = ft_split(textocondelimitador, ',');
 	while (arraydechars[csplit])
 	{
